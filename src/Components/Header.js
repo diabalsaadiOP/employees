@@ -1,5 +1,3 @@
 import '../Style/Header.css'
 
-export function Header() {
-    return <div className='header'></div>
-}
+export const Header = () => (<div className='header'></div>)
