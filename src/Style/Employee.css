@@ -1,0 +1,88 @@
+.employees-container{
+    margin: 0 auto;
+    max-width: 700px;
+}
+.employee {
+    height: 200px;
+    width: 100%;
+    margin: 50px 0;
+    box-shadow: 5px 5px 5px 5px rgb(182, 175, 175);
+}
+
+.emp-info {
+    padding: 20px 30px;
+}
+
+.emp-company {
+    font: 25px 'Trebuchet MS', Tahoma, sans-serif;
+}
+
+.emp-logo {
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    height: 85px;
+    width: 85px;
+    border-radius: 50px;
+}
+
+.emp-position {
+    font: 15px 'Segoe UI', Arial, sans-serif;
+    margin: -60px 150px;
+}
+
+.emp-description {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+    color: grey;
+}
+
+.languages {
+    margin: -100px 0 0 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.language {
+    background-color: rgb(214, 236, 214);
+    padding: 8px;
+    border-radius: 20px;
+    color: green;
+}
+
+.language:hover {
+    background-color: rgb(70, 172, 70);
+    color: aliceblue;
+}
+
+@media all and (max-width: 600px) {
+    .header {
+        background-image: url('../../public/images/bg-header-mobile.svg');
+        overflow-x: hidden;
+    }
+
+    .languages {
+        margin: -130px 400px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100px;
+    }
+
+    .emp-description {
+        margin-top: 120px;
+    }
+}
+
+@media all and (max-width: 400px) {
+
+    .languages {
+        margin: -130px 230px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100px;
+    }
+
+    .emp-description {
+        margin-top: 90px;
+    }
+}

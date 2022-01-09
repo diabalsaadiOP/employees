@@ -1,0 +1,26 @@
+.filtersPanel {
+    width: 30%;
+    height: 50px;
+    background-color: white;
+    margin: -20px auto;
+    box-shadow: 3px 3px 3px 5px rgb(182 175 175);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.subject {
+    text-align: center;
+    margin: 8px auto;
+    padding-top: 4px;
+    width: 100px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: rgb(214, 236, 214);
+}
+
+@media all and (max-width: 600px) {
+
+.filtersPanel {
+    width: 100%;
+}
+}
