@@ -1,8 +1,8 @@
 import employees from '../data.js';
 import { Employee } from './Employee';
 import { useState, useEffect } from 'react';
-import '../Style/Employee.css'
-
+// import '../Style/Employee.css';
+import styles from './styles/EmpConitainer.module.css';
 
 export const EmpCointainer = ({ filterSubjects, addFilter }) => {
     const [employeeFiltered, setEmployees] = useState(employees);
@@ -42,7 +42,7 @@ export const EmpCointainer = ({ filterSubjects, addFilter }) => {
     }, [filterSubjects])
 
     return (
-        <div className="employees-container">
+        <div className={styles["employees-container"]}>
             <Employee employees={employeeFiltered} employeesFilter={employeesFilter} addFilters={addFilter} />
         </div>
     );

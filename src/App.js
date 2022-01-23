@@ -1,4 +1,4 @@
-import './Style/App.css';
+import './Components/styles/App.css';
 import { Header } from "./Components/Header";
 import { EmpCointainer } from './Components/EmpCointainer';
 import { FiltersItems } from './Components/FiltersItems';

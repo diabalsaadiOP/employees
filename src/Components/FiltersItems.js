@@ -1,10 +1,9 @@
-import '../Style/Filters.css';
 import { SubjectItems } from './SubjectsItems';
-
+import styles from './styles/FiltersItems.module.css';
 
 export const FiltersItems = ({ filter, deleteFilter }) => {
     return filter.length ?
-        <div className='filtersPanel'>
+        <div className={styles.filtersPanel}>
             <SubjectItems filterSubjects={filter} deleteFilter={deleteFilter} />
         </div> : <></>;
 }
