@@ -4,35 +4,46 @@ import { useState, useEffect } from 'react';
 import '../Style/Employee.css'
 
 
-export function EmpCointainer({ filterSubjects, addFilter }) {
+export const EmpCointainer = ({ filterSubjects, addFilter }) => {
     const [employeeFiltered, setEmployees] = useState(employees);
 
     const employeesFilter = () => {
         const filteredEmployee = [];
         let flag = false;
+
+        // n^3 we should fix it.
         filterSubjects.forEach((subject) => {
             employees.forEach((emp) => {
                 flag = false;
+
                 if (emp.languages.includes(subject)) {
                     filteredEmployee.forEach((empFiltered) => {
-                        if(emp.id === empFiltered.id) flag = true;
+                        if (emp.id === empFiltered.id) {
+                            flag = true;
+                        }
                     });
-                    if(!flag)
-                    filteredEmployee.push(emp);
+
+                    if (!flag) {
+                        filteredEmployee.push(emp);
+                    }
                 }
             });
         });
-        if(filteredEmployee.length) setEmployees(filteredEmployee);
-        else setEmployees(employees);
-    }
 
-    const addFilters = (filter) => {
-        addFilter(filter);
+        if (filteredEmployee.length) {
+            setEmployees(filteredEmployee);
+        } else {
+            setEmployees(employees);
+        }
     }
 
     useEffect(() => {
-         employeesFilter();
+        employeesFilter();
     }, [filterSubjects])
 
-    return <div className="employees-container"><Employee employees={employeeFiltered} employeesFilter={employeesFilter}  addFilters={addFilters}/></div>;
+    return (
+        <div className="employees-container">
+            <Employee employees={employeeFiltered} employeesFilter={employeesFilter} addFilters={addFilter} />
+        </div>
+    );
 }
